@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Match</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="hero">
+
+
+        <div class="container">
+            <div class="card">
+                <div class="inner-box" id="card">
+                    <div class="card-front">
+                        <h2>LOGIN</h2>
+                        <form>
+                            <input type="email" class="input-box" placeholder="Email Address" required>
+                            <input type="password" class="input-box" placeholder="Password" required>
+                            <button type="submit" class="submit-btn">SUBMIT</button>
+                        </form>
+                        <button type="button" class="btn" onclick="openRegister()">I'm new here</button>
+    
+                    </div>
+    
+                    <div class="card-back">
+
+                        <div class="profile-pic">
+                            <img src="icon.jpg" id="photo">
+                            <input type="file" id="file" required>
+                            <label for="file" id="uploadBtn">Choose Photo</label>
+                        </div>
+
+                        <h2>REGISTER</h2>
+                        <form>
+                            <input type="text" class="input-box" placeholder="Full Name" required>
+                            <div class="gender">
+                                <span>Gender</span>
+                                <input type="checkbox" value="M">
+                                <label for="male">Male</label>
+                                <input type="checkbox" value="F">
+                                <label for="male">Female</label>
+                            </div>
+                            <Select class="input-box">
+                                <option value="ENG" id="dept">Choose Your Deparment</option>
+                                <option value="BME" id="dept">Biomedical Engineering</option>
+                                <option value="BFE" id="dept">Biotechnology and food processing Engineering</option>
+                                <option value="CVLE" id="dept">Civil Engineering And Architecture</option>
+                                <option value="COME" id="dept">Computer Engineering</option>
+                                <option value="EEE" id="dept">Electrical and Electronic Engineering</option>
+                                <option value="MECE" id="dept">Mechanical and Industrial Engineering</option>
+                                <option value="MINE" id="dept">Mining And Mineral Engineering</option>
+                                <option value="PETE" id="dept">Petroleum Engineering</option>
+                            </Select>
+                            <input type="email" class="input-box" placeholder="Email Address" required>
+                            <input type="password" class="input-box" placeholder="Password" required>
+                            <button type="submit" class="submit-btn">SUBMIT</button>
+                        </form>
+                        <button type="button" class="btn" onclick="openLogin()">I've an account</button>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        var card = document.getElementById("card");
+        function openRegister() {
+            card.style.transform = "rotateY(-180deg)";
+        }
+        function openLogin() {
+            card.style.transform = "rotateY(0deg)";
+        }
+
+    </script>
+
+</body>
+</html>
